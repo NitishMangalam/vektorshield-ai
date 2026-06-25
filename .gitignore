@@ -1,0 +1,21 @@
+# Target directories (Build outputs)
+**/target/
+**/build/
+*.class
+
+# IDE specific files and folders
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+*.pyc
+__pycache__/
+.venv/
+venv/
+
+# System or environment files
+.DS_Store
+*.log
+.env

@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  tomcat:
+    threads:
+      # Max concurrent platform threads pool capacity for background fallback
+      max: 200
+  shutdown: graceful
+
+spring:
+  application:
+    name: vektorshield-control-plane
+  threads:
+    virtual:
+      # Enforces Spring Boot to bind the newVirtualThreadPerTaskExecutor strategy
+      enabled: true
+
+intelligence:
+  core:
+    # URL pointing directly to the high-speed local loopback FastAPI runtime
+    url: http://localhost:8000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, prometheus
